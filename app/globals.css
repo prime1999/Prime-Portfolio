@@ -122,7 +122,6 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-light-100;
 		@apply overflow-x-hidden;
 	}
 
@@ -151,6 +150,5 @@
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(13.4px);
 		-webkit-backdrop-filter: blur(13.4px);
-		border: 1px solid rgba(0, 0, 0, 0.3);
 	}
 }

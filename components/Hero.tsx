@@ -6,26 +6,13 @@ import NavBar from "./NavBar";
 import developer from "@/public/assets/images/developer.jpg";
 import ParticlesContainer from "./ParticlesContainer";
 
-const services = [
-	"Landing pages",
-	"Custom Websites",
-	"Interactive Websites",
-	"E-commerce Sites",
-	"Custom Web Tools",
-	"Utility Tools",
-	"SaaS products",
-	"Backend APIs",
-	"Progressive Web Apps",
-	"Mobile-first design",
-];
-
 const Hero = () => {
 	const handleCopy = async () => {
 		await navigator.clipboard.writeText("moshoodolabanji22@gmail.com");
 		alert("✅ Copied!");
 	};
 	return (
-		<section className="relative w-[100vw] overflow-hidden">
+		<section className="relative w-[100vw] pb-12 overflow-hidden">
 			{/* Grid background */}
 			<div className="absolute inset-0 z-0 grid" />
 
@@ -99,42 +86,27 @@ const Hero = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<button className="bg-dark rounded-full py-2 px-3 shadow-xl text-light-100 text-xs font-poppins flex items-center justify-center gap-2">
-							Book a call
-							<MdOutlineWifiCalling />
-						</button>
+						<motion.button
+							whileHover="hover"
+							className="relative overflow-hidden bg-dark rounded-full py-2 px-3 shadow-xl text-light-100 text-xs font-poppins flex items-center justify-center gap-2 cursor-pointer"
+						>
+							<motion.span
+								initial={{ x: -200 }}
+								variants={{ hover: { x: 0 } }}
+								transition={{ duration: 0.7, ease: "easeInOut" }}
+								className="absolute bg-darkGray top-0 left-0 w-full h-full"
+							></motion.span>
+							<span className="z-10">Book a call</span>
+							<MdOutlineWifiCalling className="z-10" />
+						</motion.button>
 					</a>
 					<button
 						onClick={() => handleCopy()}
-						className="bg-white rounded-full py-2 px-3 text-dark text-xs font-poppins flex items-center justify-center gap-2"
+						className="bg-white rounded-full py-2 px-3 text-dark text-xs font-poppins flex items-center justify-center gap-2 cursor-pointer hover:bg-light-100"
 					>
 						<MdOutlineContentCopy />
 						Copy Email
 					</button>
-				</div>
-				<div className="relative bg-transparent w-full mx-auto overflow-hidden mt-8 p-2">
-					<h4 className="text-center text-md mb-4 font-semibold text-gray-500">
-						<span className="rotate-180">|</span>Services<span>|</span>
-					</h4>
-					<motion.div
-						animate={{ x: ["0%", "-50%"] }} // move only halfway since we’re duplicating
-						transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-						className="flex items-center gap-24 text-sm whitespace-nowrap"
-					>
-						{/* Original content */}
-						{services.map((service, i) => (
-							<p className="flex shrink-0" key={`original-${i}`}>
-								{service}
-							</p>
-						))}
-
-						{/* Duplicate content for seamless loop */}
-						{services.map((service, i) => (
-							<p className="flex shrink-0" key={`duplicate-${i}`}>
-								{service}
-							</p>
-						))}
-					</motion.div>
 				</div>
 			</div>
 		</section>
