@@ -26,7 +26,7 @@ const ListDesign = ({ list }: any) => {
 
 	return (
 		<>
-			<div className="w-9/12 mx-auto mt-2 scroll-div">
+			<div className="w-11/12 mx-auto mt-2 scroll-div lg:w-9/12">
 				<ul className="flex flex-wrap justify-center gap-8">
 					{list.map((li: string, i: any) => (
 						<li key={i} className="py-1 px-4 rounded-full shadow-lg list">

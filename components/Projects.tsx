@@ -49,8 +49,8 @@ const Projects = () => {
 				window.innerWidth < 760
 					? `translateX(${-105 * id}%)` // mobile
 					: window.innerWidth < 1200
-					? `translateX(${-102 * id}%)` // tablet
-					: `translateX(${-100 * id}%)`, // laptop
+						? `translateX(${-102 * id}%)` // tablet
+						: `translateX(${-100 * id}%)`, // laptop
 			duration: 2,
 			ease: "power2.inOut",
 		});
@@ -66,7 +66,7 @@ const Projects = () => {
 						<div
 							id="slider"
 							key={i}
-							className="shrink-0 relative w-[30vw] h-[40vh]"
+							className="shrink-0 relative w-[80vw] h-[35vh] md:w-[60vw] lg:w-[30vw] lg:h-[40vh]"
 						>
 							<div
 								style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}

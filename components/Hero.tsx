@@ -26,7 +26,7 @@ const Hero = () => {
 			{/* Hero content */}
 			<div className="relative z-10 flex flex-col items-center justify-center h-full">
 				<NavBar />
-				<div className="flex flex-col items-center justify-center gap-4 text-3xl font-semibold font-inter text-gray-400 mt-48">
+				<div className="flex flex-col items-center justify-center gap-4 text-xl text-center font-semibold font-inter text-gray-400 mt-48 md:text-3xl">
 					<span>
 						<h1 className="">
 							Hello,{" "}
@@ -63,7 +63,7 @@ const Hero = () => {
 						<span className="text-dark font-semibold">usable products.</span>
 					</p>
 				</div>
-				<div className="w-1/2 mt-10 text-gray-400 font-poppins">
+				<div className="w-10/12 mt-10 text-gray-400 font-poppins md:w-9/12 lg:w-1/2">
 					<p className="font-inter text-inter text-sm mx-auto text-center leading-10">
 						Bringing ideas to life by crafting interactive{" "}
 						<span className="bg-light-200 text-dark py-1 px-2 font-semibold">
