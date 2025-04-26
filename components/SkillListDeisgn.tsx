@@ -1,11 +1,8 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const ListDesign = ({ list }: any) => {
+const SkillListDeisgn = ({ list }: any) => {
 	useGSAP(() => {
 		gsap.fromTo(
 			".list",
@@ -14,16 +11,10 @@ const ListDesign = ({ list }: any) => {
 				y: 0,
 				opacity: 1,
 				duration: 1,
-				stagger: 0.05,
-				scrollTrigger: {
-					trigger: ".scroll-div",
-					start: "top bottom",
-					toggleActions: "play none none reverse",
-				},
+				stagger: 0.3,
 			}
 		);
 	}, []);
-
 	return (
 		<>
 			<div className="w-11/12 mx-auto mt-2 scroll-div lg:w-9/12">
@@ -39,4 +30,4 @@ const ListDesign = ({ list }: any) => {
 	);
 };
 
-export default ListDesign;
+export default SkillListDeisgn;
