@@ -4,6 +4,7 @@ import Projects from "@/components/Projects";
 import SkillAndService from "@/components/SkillAndService";
 import Skills from "@/components/Skills";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 const page = async () => {
 	return (
@@ -14,6 +15,7 @@ const page = async () => {
 			<Skills />
 			<PostsSection />
 			<ContactForm />
+			<Footer />
 		</main>
 	);
 };

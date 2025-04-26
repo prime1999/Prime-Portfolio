@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 const SinglePost = ({ post }: any) => {
 	return (
@@ -25,9 +26,10 @@ const SinglePost = ({ post }: any) => {
 					<p className="text-light-200 mb-4">{post.slug}</p>
 					<Link
 						href={`/blog/${post.slug}`}
-						className="rounded-full px-2 py-1 bg-light-200 text-dark font-semibold hover:bg-white"
+						className="w-24 flex gap-2 rounded-full px-2 py-1 bg-light-200 text-dark font-semibold hover:bg-white"
 					>
 						Read Post
+						<MdOutlineArrowOutward />
 					</Link>
 				</div>
 			</motion.div>
