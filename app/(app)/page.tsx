@@ -3,6 +3,7 @@ import PostsSection from "@/components/PostsSection";
 import Projects from "@/components/Projects";
 import SkillAndService from "@/components/SkillAndService";
 import Skills from "@/components/Skills";
+import ContactForm from "@/components/ContactForm";
 
 const page = async () => {
 	return (
@@ -12,6 +13,7 @@ const page = async () => {
 			<Projects />
 			<Skills />
 			<PostsSection />
+			<ContactForm />
 		</main>
 	);
 };

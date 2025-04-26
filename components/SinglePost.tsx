@@ -8,7 +8,7 @@ const SinglePost = ({ post }: any) => {
 		<div>
 			<motion.div
 				whileHover="hover"
-				className="relative w-[30vw] rounded-lg font-inter overflow-hidden"
+				className="relative w-[80vw] md:w-[60vw] lg:w-[30vw] rounded-lg font-inter overflow-hidden"
 			>
 				<motion.img
 					variants={{
