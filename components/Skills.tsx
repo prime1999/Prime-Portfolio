@@ -31,7 +31,7 @@ const Skills = () => {
 					</ul>
 					<div>
 						{status === "frontend" ? (
-							<FrontendSkills selectedPath={status} />
+							<FrontendSkills />
 						) : status === "backend" ? (
 							<BackendSkills />
 						) : (

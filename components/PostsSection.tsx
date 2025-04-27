@@ -1,7 +1,7 @@
 import SinglePost from "./SinglePost";
 
 async function getPosts() {
-	const res = await fetch("http://localhost:3000/api/post", {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/post`, {
 		cache: "no-store",
 	});
 	const data = await res.json();
